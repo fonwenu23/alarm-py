@@ -5,14 +5,15 @@ import winsound
 def set_alarm(alarm_time):
     while True:
         current_time = datetime.datetime.now().strftime("%H:%M")
-        time.sleep(2)
+        time.sleep(1)
         if current_time == alarm_time:
             winsound.PlaySound('SystemHand', winsound.SND_FILENAME | winsound.SND_LOOP | winsound.SND_ASYNC)
-        elif current_time != alarm_time:
-           winsound.PlaySound(None, winsound.SND_PURGE)
-
+            print("Good Morning Franklin. It's time to GRIND!")
+            time.sleep(30)
+            exit()
+            
 #Set the alarm time variable
-alarm_time = "08:23"
+alarm_time = "08:43"
 set_alarm(alarm_time)
 
 # winsound.PlaySound('SystemHand', winsound.SND_FILENAME | winsound.SND_LOOP | winsound.SND_ASYNC)
